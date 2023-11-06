@@ -14,8 +14,8 @@ const TopRateStudio = () => {
     await axios
       .get(import.meta.env.VITE_REACT_APP_API_URL + "/Studio/GetAll")
       .then((res) => {
-        // console.log(res.data.$values);
-        setData(res.data.$values);
+        console.log(res.data);
+        setData(res.data);
       })
       .catch((err) => setData(err));
   };
@@ -44,7 +44,7 @@ const TopRateStudio = () => {
         }
       >
         <Typography variant="h5">Top Rate Studio</Typography>
-        {data.map((studio, index) => {
+        {/* {data.map((studio, index) => {
           return (
             <CardStudio
               key={index}
@@ -54,7 +54,7 @@ const TopRateStudio = () => {
               ratingStb={studio.ratingStb}
             />
           );
-        })}
+        })} */}
       </Stack>
     </Box>
   );
