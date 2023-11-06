@@ -25,8 +25,8 @@ const FormBooking = ({
         <Box>
           <Stack spacing={4}>
             <TextField
-              id="user"
-              label="Username"
+              id="FullName"
+              label="FullName"
               variant="outlined"
               inputRef={nameRef}
               required

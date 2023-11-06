@@ -78,7 +78,8 @@ const Booking = (props) => {
   const handleSubmit = async () => {
     const token = localStorage.getItem("token");
     if (token != null) {
-      const email = jwtDecode(token).email;
+      const email = jwtDecode(token).Email;
+      // console.log("Email: " + email);
       const bookingRequest = {
         PhoneNumber: booking.phone,
         BookingDate: booking.dateTime,
@@ -112,7 +113,7 @@ const Booking = (props) => {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ marginTop: 10, backgroundColor: "#1F1E1E" }}>
+    <Container maxWidth="sm" sx={{ marginTop: 5, backgroundColor: "#1F1E1E" }}>
       <Box sx={{ width: "100%", paddingTop: 5, paddingBottom: 5 }}>
         <Stepper activeStep={activeStep}>
           {steps.map((label) => {

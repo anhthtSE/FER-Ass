@@ -36,7 +36,12 @@ const Service = () => {
             variant="body1"
             component={Link}
             to="/"
-            sx={{ textDecoration: "none" }}
+            sx={{
+              textDecoration: "none",
+              "&:hover": {
+                color: "#FF7F22",
+              },
+            }}
           >
             Home
           </Typography>
@@ -45,7 +50,12 @@ const Service = () => {
           variant="body1"
           component={Link}
           to="/services"
-          sx={{ textDecoration: "none" }}
+          sx={{
+            textDecoration: "none",
+            "&:hover": {
+              color: "#FF7F22",
+            },
+          }}
         >
           Service
         </Typography>

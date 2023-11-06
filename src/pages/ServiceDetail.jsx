@@ -21,6 +21,7 @@ const ServiceDetail = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const { serviceId } = useParams();
+  // console.log(serviceId);
 
   const [data, setData] = useState();
 
@@ -58,7 +59,12 @@ const ServiceDetail = () => {
             variant="body1"
             component={Link}
             to="/"
-            sx={{ textDecoration: "none" }}
+            sx={{
+              textDecoration: "none",
+              "&:hover": {
+                color: "#FF7F22",
+              },
+            }}
           >
             Home
           </Typography>
@@ -67,16 +73,16 @@ const ServiceDetail = () => {
           variant="body1"
           component={Link}
           to="/services"
-          sx={{ textDecoration: "none" }}
+          sx={{
+            textDecoration: "none",
+            "&:hover": {
+              color: "#FF7F22",
+            },
+          }}
         >
           Service
         </Typography>
-        <Typography
-          variant="body1"
-          component={Link}
-          to="/services"
-          sx={{ textDecoration: "none" }}
-        >
+        <Typography variant="body1" sx={{ textDecoration: "none" }}>
           {data && data.service && data.service.serviceName}
         </Typography>
       </Breadcrumbs>

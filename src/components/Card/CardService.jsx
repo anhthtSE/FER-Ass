@@ -40,7 +40,8 @@ const CardService = (props) => {
           `/Studio/GetStudioByID/${studioId}`
       )
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data.logo);
+        console.log(res.data.studioName);
         setStudioLogo(res.data.logo);
         setStudioName(res.data.studioName);
       })
